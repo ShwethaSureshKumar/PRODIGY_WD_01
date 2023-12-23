@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Libre+Baskerville&family=Pacifico&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color:#f5ebe0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+h1{
+    font-size: 3rem;
+}
+
+h6 {
+    font-size:1.5rem
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo,
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.nav-link:hover {
+    background-color: #555;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-logo {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Pacifico', cursive;
+}
+
+.panel-display {
+    background: linear-gradient(to right, #45aaf2, #cdb4db);
+    height: fit-content;
+}
+
+.panel-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    padding-bottom: 1rem;
+}
+
+.text {
+    flex: 1; 
+    padding: 20px;
+}
+
+.text h1, .text h3, .text p {
+    text-align: left;
+}
+
+.image {
+    flex: 1; 
+    text-align: right;
+}
+
+.image img {
+    max-width: 80%;
+    height: auto;
+}
+
+
+
+.featured-books {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.book {
+    text-align: center;
+    line-height: 0.25;
+}
+
+.book img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.book h2, .book p {
+    margin: 0;
+}
+
+.featured-title{
+    padding-left: 3rem;
+}
+
+/*review styles*/
+.reviews-title{
+    padding-left: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    background: linear-gradient(to right, #45aaf2, #cdb4db);
+}
+
+
+.book {
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 16px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s ease-in-out; 
+
+    cursor: pointer;
+}
+
+.book:hover {
+    transform: scale(1.05); 
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 80%; 
+    width: auto; 
+    text-align:justify;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+.nav-menu .nav-link.active {
+    color: pink; 
+
+}
+
+
+/* events page styles */
+.event-card {
+    
+    margin: 20px;
+    padding: 2rem;
+    border: 1px solid #5f5a5a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease-in-out;
+    background-color: #2b1c2b;
+    color: white;
+    width: 325px;
+    height: 450px;
+    position: relative;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.event-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.event-details {
+    font-size: 1.1em;
+    margin: 10px;
+}
+
+.event-description {
+    font-size: 1em;
+    padding: 10px;
+}
+
+
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.25rem;
+    justify-content: center;
+}
+
+/*form styles*/
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
